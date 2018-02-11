@@ -31,12 +31,14 @@ ALLOWED_HOSTS = ['0.0.0.0']
 # Application definition
 
 INSTALLED_APPS = [
+    'modeltranslation',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'games'
 ]
 
 MIDDLEWARE = [
@@ -115,6 +117,14 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+# Model translation configuration
+LANGUAGES = (
+    ('en', 'English'),
+    ('es', 'Spanish'),
+    ('ca', 'Catalan'),
+)
+MODELTRANSLATION_LANGUAGES = ('en', 'es', 'ca')
 
 
 # Static files (CSS, JavaScript, Images)
