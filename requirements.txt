@@ -1,3 +1,2 @@
-Django==1.11
-django-modeltranslation==0.12.1
+Django
 psycopg2
