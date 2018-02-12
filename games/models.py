@@ -30,6 +30,7 @@ class Game(models.Model):
     max_people = models.PositiveSmallIntegerField()
     title = models.CharField(max_length=1024)
     description = models.TextField()
+    short_description = models.TextField()
 
     def __str__(self):
         return str(self.title)

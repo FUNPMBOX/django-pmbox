@@ -25,7 +25,7 @@ SECRET_KEY = '1p+$!%u&lz-pjy^yr8-t&)%^^_20+9lzonn5x$!^vg3v=$o8@v'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -56,7 +56,7 @@ ROOT_URLCONF = 'app.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -130,4 +130,18 @@ MODELTRANSLATION_LANGUAGES = ('en', 'es', 'ca')
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = '/static/' # the path in url
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+]
+
+# Branding config
+
+BRAND = 'PMBOX'
+
+SOCIAL_MEDIA = {
+    'twitter': 'https://twitter.com/uibuniversitat',
+    'facebook': 'https://www.facebook.com/SomUIB',
+    'instagram': 'https://www.instagram.com/somuib/'
+}

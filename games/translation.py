@@ -2,7 +2,7 @@ from modeltranslation.translator import translator, TranslationOptions
 from games.models import Game, Stage, Phase, Material
 
 class GameOptions(TranslationOptions):
-    fields = ('title', 'description', )
+    fields = ('title', 'description', 'short_description',)
 
 
 class StageOptions(TranslationOptions):
