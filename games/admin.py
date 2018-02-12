@@ -15,7 +15,9 @@ class TranslatableAdminMixin(TranslationAdmin):
 
 class GameAdmin(TranslatableAdminMixin):
     filter_horizontal = ('material', 'phase', 'stage')
-    fields = ('duration', 'max_people', 'title', 'short_description', 'description', 'stage', 'phase', 'material')
+    fields = ('duration', 'max_people', 'title',
+              'short_description', 'description', 'stage',
+              'phase', 'material', 'image')
 
 
 class StageAdmin(TranslatableAdminMixin):

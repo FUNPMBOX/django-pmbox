@@ -31,6 +31,7 @@ class Game(models.Model):
     title = models.CharField(max_length=1024)
     description = models.TextField()
     short_description = models.TextField()
+    image = models.FileField(null=True, blank=True)
 
     def __str__(self):
         return str(self.title)
